@@ -1,10 +1,43 @@
 #include <stdio.h>
 
 __global__ void square(float * d_out, float * d_in){
-	// Todo: Fill in this function
+	
 	int idx = threadIdx.x;
 	float f = d_in[idx];
-	d_out[idx] = f*f;
+	switch(idx%32){
+	    case 0: d_out[idx] = f*f;break;
+	    case 1: d_out[idx] = f*f;break;
+	    case 2: d_out[idx] = f*f;break;
+	    case 3: d_out[idx] = f*f;break;
+	    case 4: d_out[idx] = f*f;break;
+	    case 5: d_out[idx] = f*f;break;
+	    case 6: d_out[idx] = f*f;break;
+	    case 7: d_out[idx] = f*f;break;
+	    case 8: d_out[idx] = f*f;break;
+	    case 9: d_out[idx] = f*f;break;
+	    case 10: d_out[idx] = f*f;break;
+	    case 11: d_out[idx] = f*f;break;
+	    case 12: d_out[idx] = f*f;break;
+	    case 13: d_out[idx] = f*f;break;
+	    case 14: d_out[idx] = f*f;break;
+	    case 15: d_out[idx] = f*f;break;
+	    case 16: d_out[idx] = f*f;break;
+	    case 17: d_out[idx] = f*f;break;
+	    case 18: d_out[idx] = f*f;break;
+	    case 19: d_out[idx] = f*f;break;
+	    case 20: d_out[idx] = f*f;break;
+	    case 21: d_out[idx] = f*f;break;
+	    case 22: d_out[idx] = f*f;break;
+	    case 23: d_out[idx] = f*f;break;
+	    case 24: d_out[idx] = f*f;break;
+	    case 25: d_out[idx] = f*f;break;
+	    case 26: d_out[idx] = f*f;break;
+	    case 27: d_out[idx] = f*f;break;
+	    case 28: d_out[idx] = f*f;break;
+	    case 29: d_out[idx] = f*f;break;
+	    case 30: d_out[idx] = f*f;break;
+	    case 31: d_out[idx] = f*f;break;
+	}
 }
 
 int main(int argc, char ** argv) {
